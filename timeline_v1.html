@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>::MOL-UI::</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <style>
+            /*
+            * Base structure
+            */
+            /* Move down content because we have a fixed navbar that is 50px tall */
+            body {
+            padding-top: 50px;
+            }
+            ul, li {
+                margin: 0;
+                padding: 0;
+            }
+            nav.navbar {
+            border-bottom: 1px solid #ccc;
+            }
+            .mainnav-panel {
+            width: 25%;
+            margin: 0 auto;
+            }
+            .login-panel header {
+            padding: 9px;
+            }
+            .login-panel h4,
+            .login-panel h6 {
+            padding: 0;
+            margin: 0;
+            }
+            .login-info {
+            border-left: 1px solid #ccc;
+            }
+            
+            .search-client {
+                border-radius: none;
+            }
+            
+            .media-body {
+                padding: 15px;
+            }
+            
+            .client-details-panel {
+                padding: 10px 10px 0;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+            }
+            
+            .client-phone {
+                color: #666;    
+            }
+            
+            .online-status-panel {
+                display: table;
+                margin-bottom: 10px;
+            }
+            .status-color {
+                height: 20px;
+                width: 20px;
+                background: green;
+                border-radius: 50px;
+                display: table-cell;
+            }
+            .status-text {
+                color: #999;
+                font-style: italic;
+                display: table-cell;
+                padding-left: 7px;
+            }
+            
+            /* timeline component */
+            .timeline-panel {
+                
+            }
+            
+            .timeline-list {
+                padding: 0;
+            }
+            
+            .timeline {
+                background: blue;
+                display: inline-block;
+                margin: 30px;
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                position: relative;
+            }
+            
+            .timeline:hover {
+                cursor: pointer;
+            }
+            
+            .timeline a {
+                position: absolute;
+                top: 40%;
+                color: #fff;
+                left: 30%;
+                text-decoration: none;
+            }
+            
+            /* level-1 */
+            .timeline-list-level-1 {
+                display: none;
+                position: absolute;
+                left: 130px;
+                padding: 0;
+/*                background: red;*/
+            }
+            
+            .timeline-level-1 {
+                background: green;
+                display: inline-block;
+                margin: 20px;
+                width: 70px;
+                height: 70px;
+                border-radius: 70px;
+                position: relative;
+            }
+            
+            .timeline-level-1:hover {
+                cursor: pointer;
+            }
+            
+            .timeline-level-1 a {
+                position: absolute;
+                top: 40%;
+                color: #fff;
+                left: 30%;
+                text-decoration: none;
+            }
+            
+            /* level-2 */
+            .timeline-list-level-2 {
+                display: none;
+                position: absolute;
+                left: 130px;
+                padding: 0;
+            }
+            
+            .timeline-level-2 {
+                background: yellow;
+                display: inline-block;
+                margin: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                position: relative;
+            }
+            
+            .timeline-level-2:hover {
+                cursor: pointer;
+            }
+            
+            .timeline-level-2 a {
+                position: absolute;
+                top: 40%;
+                color: #fff;
+                left: 30%;
+                text-decoration: none;
+            }
+        </style>
+        <script>
+        
+            $(document).ready(function() {
+               
+                $('.timeline a').click(function (){
+                    var self = $(this).parent();
+                    if(self.has('ul')) {
+                        //restoring parent list items view
+                        $('ul.timeline-list-level-1').hide();
+                        $('ul.timeline-list li.timeline').css('left', 0);
+                        
+                        var innerListItem = self.children('ul').children('li');
+                        var totalInnerItems = innerListItem.length;
+                        var moveLength =  totalInnerItems * innerListItem.outerWidth() + (totalInnerItems * parseInt(innerListItem.css('margin')) * 2 ) + 20;
+                        self.nextAll('li.timeline').animate({'left': moveLength+'px'}, 1000, 'linear', function() {
+                            self.find('ul.timeline-list-level-1').css({'width':moveLength+'px'});
+                            self.find('ul.timeline-list-level-1').fadeIn(500);
+                        });
+                    }
+                })
+                
+            });
+            
+        </script>
+    </head>
+    <body>
+        <!--top nav bar -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="mainnav-panel">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Mortgage</a></li>
+                            <li><a href="#">Feature 1</a></li>
+                            <li><a href="#">Feature 2</a></li>
+                        </ul>
+                    </div>
+                    <div class="login-panel pull-right">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a class="glyphicon glyphicon-bell"></a>
+                            </li>
+                            <li class="login-info">
+                                <header>
+                                    <h4>Larry Wilson H</h2>
+                                    <h6>Last login on Friday, April 15, 2016</h6>
+                                </header>
+                            </li>
+                            <li>
+                                <a class="glyphicon glyphicon-menu-down"></a>
+                            </li>
+                        </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--/top nav bar -->
+        <!--page container-->
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Search for customer</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="search-panel">
+                    <div class="input-group">
+                        <input type="text" class="search-client form-control" placeholder="Search" />
+                        <span class="input-group-btn">
+                        <button class="btn" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="client-details-panel">
+                    <div class="col-md-4">
+                        <div class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAJRAAAAJDNiZGZiMmM1LTE0NjktNDg3Ni1hZjEzLTBlZWFmNWE5N2ZhYQ.jpg">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Bill Gates</h4>
+                                <h5 class="">4589 –5888995 -55555</h5>
+                                <div class="online-status-panel">
+                                    <span class="status-color"></span><span class="status-text">Online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <address>
+                                    <p>1627, Ladoradrive</p>
+                                    <p>NY, USA, 22360</p>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="media">
+                            <div class="media-body">
+                                <p class="client-email">billgates@live.com</p>
+                                <p class="client-phone"><i class="glyphicon glyphicon-earphone"></i>+1-111-222-3333 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-panel">
+                    <ul class="timeline-list">
+                        <li class="timeline">
+                            <a href="#">Apply</a>
+                        </li>
+                        <li class="timeline">
+                            <a href="#">Step 2</a>
+                            <ul class="timeline-list-level-1">
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 2.1</a>
+                                    <ul class="timeline-list-level-2">
+                                        <li class="timeline-level-2">
+                                            <a href="#">Step 2.1.1</a>
+                                        </li>
+                                        <li class="timeline-level-2">
+                                            <a href="#">Step 2.2.2</a>
+                                        </li>
+                                        <li class="timeline-level-2">
+                                            <a href="#">Step 2.3.3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 2.2</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 2.3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="timeline">
+                            <a href="#">Step 3</a>
+                            <ul class="timeline-list-level-1">
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 3.1</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 3.2</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 3.3</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 3.4</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 3.5</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="timeline">
+                            <a href="#">Step 4</a>
+                            <ul class="timeline-list-level-1">
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.1</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.2</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.3</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.4</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.5</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.6</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="timeline">
+                            <a href="#">Step 5</a>
+                            
+                            <ul class="timeline-list-level-1">
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.1</a>
+                                </li>
+                                <li class="timeline-level-1">
+                                    <a href="#">Step 4.2</a>
+                                </li>
+                            </ul>    
+                        </li>
+                        <li class="timeline">
+                            <a href="#">Step 6</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="timeline-ruler"/>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <button class="btn" type="button"> Invite </button>
+                </div>
+            </div>
+        </div>
+        <!--/page container-->
+    </body>
+</html>
