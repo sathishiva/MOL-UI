@@ -1,0 +1,449 @@
+/*
+* Base structure
+*/
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 60px;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body.loan-detail-page {
+/*    background: #999;*/
+/*
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+*/
+}
+body.loan-detail-page::after {
+/*
+    content: "";
+    background: url('../images/prop5.jpg') no-repeat center center;
+    background-size:cover;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    -webkit-filter: grayscale(1);  Old WebKit 
+    filter: grayscale(1);
+*/
+}
+
+.loan-detail-page .timeline-container {
+    text-align: center !important;
+}
+.loan-detail-page .timeline-panel {
+    margin: 34px 0 0;
+}
+
+/**/
+.container-fluid {
+    width: 80%;
+}
+
+a.navbar-brand {
+    padding: 0;
+}
+.glyphicon {
+    color: #fff;
+}
+nav.navbar .container-fluid{
+    border-bottom: 1px solid #ccc;
+    background: #54301a;
+    color: #fff;    
+}
+nav.navbar a {
+    color: #fff;
+}
+nav.navbar a:hover {
+    color: #54301a;
+}
+.mainnav-panel {
+    width: 25%;
+    margin: 0 auto;
+}
+.login-panel header {
+    padding: 9px;
+}
+
+.login-panel h4,
+.login-panel h6 {
+    padding: 0;
+    margin: 0;
+}
+
+.login-info {
+    border-left: 1px solid #ccc;
+}
+
+/* page head row styles*/
+.page-head-row h3{
+    margin: 0;
+}
+
+.stylish-input-group .input-group-addon{
+    background: #fff !important; 
+}
+.stylish-input-group .form-control{
+    border-right:0; 
+    box-shadow:0 0 0; 
+    border-color:#ccc;
+    border-radius: 0;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+    outline: none;
+}
+
+.stylish-input-group span {
+    color: #666;
+    border-radius: 0;
+}
+
+.page-head-row .btn {
+    border-radius: 0;
+    float: right;
+}
+
+.page-head-row .btn-mol {
+    background: #54301a;
+    color: #fff;
+}
+
+.page-head-row .btn-mol:hover {
+    opacity: 0.7;
+}
+
+/* loan list row styles*/
+.loan-list-row {
+    padding: 10px 0;
+    border-bottom: 1px dotted #999;
+}
+
+/* prop image styles */
+
+.prop-panel img {
+    width: 200px;
+    height: 160px;
+}
+
+.prop-panel .figure{
+    position: relative;
+}
+
+.prop-panel .figure-caption {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: #000;
+    opacity: 0.75;
+    min-width: 200px;
+}
+
+.prop-panel h3 {
+    margin: 0;
+    font-size: 16px;
+    padding: 10px 10px 0;
+}
+
+.prop-address-panel {
+}
+
+.prop-address-panel address {
+    margin: 0;
+    padding: 10px 0 5px 10px;
+    font-size: 12px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.prop-actions-panel {
+    display: inline-block;
+    padding: 0;
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
+.prop-actions-panel a {
+    padding: 0 3px;
+}
+
+.prop-actions-panel a:hover {
+    text-decoration: none;
+    color: #666;
+}
+
+
+/* timeline styles */
+.timeline-panel {
+    margin: 45px 0 0;    
+}
+
+/* timeline list*/
+.timeline-list {
+
+}
+
+/* timeline ruler style*/
+/*
+ul.timeline-list.level-0 > li::before {
+    content: '';
+    border-top: 3px dotted #666;
+    display: block;
+    position: absolute;
+    top: 48%;
+    width: 100%;
+    left: 100%;
+    z-index: -1;
+    height: 141px;
+}
+*/
+
+.timeline-list ul {
+    display: inline-block;
+}
+
+.timeline-list li{
+    display: inline-block;
+    background: transparent;
+/*                -webkit-transition: all 0.4s ease;*/
+    margin: -25px;
+}
+
+.timeline-list li a {
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.timeline-list li a:hover {
+    box-shadow: 0px 0px 4px 4px #8cadd5, 0px 0px 25px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 0px 4px 4px #8cadd5, 0px 0px 25px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 4px 4px #8cadd5, 0px 0px 25px rgba(0,0,0,0.8);
+    -o-box-shadow: 0px 0px 4px 4px #8cadd5, 0px 0px 25px rgba(0,0,0,0.8);
+/*                transform: scale(1.2, 1.2);*/
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.timeline-list.level-0 {
+  -webkit-transform: perspective(0);
+  -webkit-transform-style: preserve-3d;
+}
+
+.timeline-list.level-0 >  li {
+    position: relative;
+}
+
+.timeline-list.level-0 a {
+    color: #fff;
+    border: 3px solid #fff;
+    background: #8cadd5;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    transition: all 0.5s ease;
+
+    box-shadow: 0px 0px 4px 4px #8cadd5;
+    -webkit-box-shadow: 0px 0px 4px 4px #8cadd5;
+    -moz-box-shadow: 0px 0px 4px 4px #8cadd5;
+    -o-box-shadow: 0px 0px 4px 4px #8cadd5;
+}
+
+.level-0 > li > a {
+    position: relative;
+    font-weight: bold !important; 
+    padding: 2.5em 0.5em;
+}
+
+.timeline-list.level-1 a {
+    background: #8cadd5;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    opacity: 0.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timeline-list.level-2 a {
+    background: #8cadd5;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;    
+    opacity: 0.6;
+}
+
+a.user-info {
+    background: #8cadd5;
+}
+
+a.system-info,
+a.system-info:link {
+    background: #aaa !important;
+    opacity: 0.8;
+    box-shadow: 0px 0px 4px 4px #aaa !important;
+    -webkit-box-shadow: 0px 0px 4px 4px #aaa !important;
+    -moz-box-shadow: 0px 0px 4px 4px #aaa !important;
+    -o-box-shadow: 0px 0px 4px 4px #aaa !important;
+}
+a.system-info:hover {
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.8) !important;
+    -webkit-box-shadow: 0px 0px 25px rgba(0,0,0,0.8) !important;
+    -moz-box-shadow: 0px 0px 25px rgba(0,0,0,0.8) !important;
+    -o-box-shadow: 0px 0px 25px rgba(0,0,0,0.8) !important;
+}
+
+.coverflow-right {
+    -webkit-transform: rotateY(-40deg) rotateX(10deg);
+}
+
+.coverflow-left {
+    -webkit-transform: rotateY(40deg) rotateX(10deg);
+}
+
+.coverflow-top {                
+    -webkit-transform: rotateY(0deg);
+    -webkit-transition: all 1.2s ease-in-out 0.5s;
+   transition: all 1.2s ease-in-out 0.5s;
+}
+
+.coverflow-top ul.level-0 > li {
+    margin: 9px;
+}
+
+.coverflow-top ul.level-1 > li {
+    margin: 6px;
+}
+
+.coverflow-top ul.level-2 > li {
+    margin: 3px;
+}
+
+.coverflow-top ul li:last-child {
+    margin-right: 0 !important;
+}
+
+.coverflow-top ul.level-2 > li {
+    margin: 3px;
+}
+
+.coverflow-top a {
+    box-shadow: 0px 0px 4px 4px #8cadd5, 10px 30px 50px -15px rgba(0,0,0,0.4) !important;
+}
+
+/* coverflow status styles*/
+/*
+.coverflow-top a.done::before {
+    content: "\2713 ";
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.coverflow-top a.pending::before {
+    content: "i ";
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid;
+    width: 33px;
+    height: 33px;
+    border-radius: 33px;
+    position: relative;
+    left: 32%;
+}
+*/
+.coverflow-top a:hover,
+.coverflow-top a:visited,
+.coverflow-top a:active,
+.coverflow-top a:link{
+    text-decoration: none;
+}
+/*
+.coverflow-top a:active {
+    background: #666 !important;
+}
+*/
+
+span.status-text {
+    position: absolute;
+    display: inline-block;
+    font-size: 10px;
+    bottom: -22px;
+    color: #666;
+    width: 70%;
+    right: 18px;
+}
+
+span.status-symbol {
+    position: absolute;
+    display: inline-block;
+    top: 6%;
+    left: 38%;
+    font-size: 2em;
+}
+
+/* form styles */
+.form-panel > div{
+    display: none;
+    margin: 0;
+    padding: 0;
+    min-height: 300px;
+}
+
+/*little triangle - form pointer*/
+.loan-detail-page .coverflow-top > a::after {
+    content: '';
+    border-bottom: 20px solid #8cadd5;
+    display: block;
+    position: absolute;
+    top: 10em;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    width: 10px;
+    left: 40%;
+}
+
+.form-row {
+    border-top: 7px solid #8cadd5;
+    display: none;
+}
+.form-panel .panel {
+    margin: 0;
+}
+
+.form-panel .panel-footer button{
+    margin: 0 5px;
+}
+
+.pending-task-panel {
+    display: none;
+}
+
+.pending-task-panel table td {
+    padding: 15px 0;
+}
+/* temp styles - should be removed  */
+.pending-task-panel table tr:first-child {
+    background: #ccc;
+    color: #666;
+}
+
+.pending-task-panel table tr:nth-child(1) + tr td:nth-child(2){
+    background: #eee;
+    cursor: pointer;
+}

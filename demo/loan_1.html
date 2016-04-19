@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>::MOL-UI::</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body class="loan-detail-page">
+        <!--top nav bar -->
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" title="JPMorgan Chase & Co"><img src='images/jpmc_logo.png'/></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="login-panel pull-right">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a class="glyphicon glyphicon-bell"></a>
+                            </li>
+                            <li class="login-info">
+                                <header>
+                                    <h4>Bill Gates</h2>
+                                    <h6>Last login on Friday, April 15, 2016</h6>
+                                </header>
+                            </li>
+                            <li>
+                                <a class="glyphicon glyphicon-menu-down"></a>
+                            </li>
+                        </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--/top nav bar -->
+        <!--page container-->
+        <div class="container-fluid">
+            <div class="row page-head-row">
+                <div class="col-md-2">
+                    <h3>My Loan</h3>    
+                </div>
+                <div class="col-md-8">
+<!--
+                    <div class="input-group stylish-input-group">
+                        <input type="text" class="form-control"  placeholder="Search your loan here..." >
+                        <span class="input-group-addon">
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>  
+                        </span>
+                    </div>
+-->
+                </div>
+                <div class="col-md-2">
+                    <a href="loan_list_v2.html" class="btn btn-default" >Back</a>
+                </div>
+            </div>
+            <!-- loan list rows-->
+            <!-- row 1-->
+            <div class="row loan-list-row" id="first-row">
+                <div class="col-md-2">                    
+                    <!--property image and info goes here-->
+                    <div class="prop-panel">
+                        <figure class="figure">
+                            <a href="javascript:void(0)">
+                                <img src="images/prop5.jpg" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                            </a>
+                            <figcaption class="figure-caption text-xs-right">
+                                <article>
+                                    <header>
+                                        <h3>5M</h3>
+                                        <div class="prop-address-panel">
+                                            <address>2500 Central Ave</address>
+                                            <div class="prop-actions-panel">
+                                                <a href="#" class="lock glyphicon glyphicon-lock"></a>
+                                                <a href="#" class="home glyphicon glyphicon-home"></a>
+                                                <a href="#" class="more glyphicon glyphicon-chevron-down"></a>
+                                            </div>    
+                                        </div>
+                                    </header>
+                                </article>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-10 timeline-container">
+                    <!--time line has to go here-->
+                    
+                    <div class="timeline-panel">
+
+                        <!-- timeline-level-0 -->
+                        <ul class="timeline-list level-0">
+                            <li>
+                                <a href="#" class="done" data-step="step_1">
+                                    <span class="status-symbol glyphicon glyphicon-ok-sign"></span>
+                                    Applied
+                                    <span class="status-text">13 Apr 2016</span>
+                                </a>
+                                <!-- timeline-level-1 -->
+                                <ul class="timeline-list level-1">
+                                    <li>
+                                        <a href="#" data-step="step_1_1">Complete the application</a>
+                                        <!-- timeline-level-2 -->
+                                        <ul class="timeline-list level-2">
+                                            <li>
+                                                <a href="#" data-step="step_1_1_1">Property & Loan info</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-step="step_1_1_2">Borrower Information</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-step="step_1_1_3">Declarations & Disclosures</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_1_2">Submit the application</a>
+                                    </li>
+                                </ul>    
+                            </li>
+                            <li>
+                                <a href="#" data-step="step_2">
+                                    <span class="status-symbol glyphicon glyphicon glyphicon-ok-sign"></span>
+                                    Confirmed Intent
+                                    <span class="status-text">14 Apr 2016</span>
+                                </a>
+                                <!-- timeline-level-1 -->
+                                <ul class="timeline-list level-1">
+                                    <li>
+                                        <a href="#" data-step="step_2_1">We sent you a welcome package</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_2_2">Tell us to proceed</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_2_3">Your Rate is Locked</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" data-step="step_3">
+                                    <span class="status-symbol glyphicon glyphicon glyphicon-info-sign"></span>
+                                    Collecting Info
+                                    <span class="status-text">15 Apr 2016</span>
+                                </a>
+                                <ul class="timeline-list level-1">
+                                    <li>
+                                        <a href="#" data-step="step_3_1">Upload your documentation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_3_2">Answer additional questions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_3_3" class="system-info">We orderded your Title</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_3_4" class="system-info">We ordered your Apprasial</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_3_5" class="system-info">We pulled your credit</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_3_6" class="system-info">Obtained your credit report</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_3_7" class="system-info">We sent you your apprasial</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"  class="system-info" data-step="step_4">
+<!--                                    <span class="status-symbol glyphicon glyphicon glyphicon-info-sign"></span>-->
+                                    Wait for approval
+                                </a>
+                                <ul class="timeline-list level-1">
+                                    <li>
+                                        <a href="#" data-step="step_4_1">We doing financial analysis</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_4_2">Your Approved</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="pending system-info" data-step="step_5">
+<!--                                    <span class="status-symbol glyphicon glyphicon glyphicon-info-sign"></span>-->
+                                    Targeting to close
+                                </a>
+                                
+                                <ul class="timeline-list level-1">
+                                    <li>
+                                        <a href="#" data-step="step_5_1" class="system-info">We're ready to close</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_5_2" class="system-info">We sent the closing package</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-step="step_5_3" class="system-info">Closing is scheduled</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="pending system-info" data-step="step_6">
+<!--                                    <span class="status-symbol glyphicon glyphicon glyphicon-info-sign"></span>-->
+                                    Disperse Funds
+                                </a>
+                                <ul class="timeline-list level-1">
+                                    <li>
+                                        <a href="#" data-step="step_6_1" class="system-info">Closed & Funded</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- form row -->
+            <div class="row form-row">
+                <div class="col-md-9">
+                <!--form container-->
+                    <div class="form-panel">
+                        <div data-step="no_step">
+                            <div class="panel panel-danger">
+                                <div class="panel-heading">
+                                    Error Information
+                                </div>
+                                <div class="panel-body">
+                                    No data found!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-step="step_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        Personal Information
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer form-actions-panel">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-step="step_2">Submit</button>
+                                            <button type="button" class="btn btn-primary pull-right" data-step="step_2">Next</button>
+                                            <button type="button" class="btn btn-disabled pull-right" disabled>Previous</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_1_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 1.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer form-actions-panel">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-step="step_2">Submit</button>
+                                            <button type="button" class="btn btn-primary pull-right" data-step="step_2">Next</button>
+                                            <button type="button" class="btn btn-disabled pull-right" disabled>Previous</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_1_1_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 1.1.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer form-actions-panel">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-step="step_2">Submit</button>
+                                            <button type="button" class="btn btn-primary pull-right" data-step="step_2">Next</button>
+                                            <button type="button" class="btn btn-disabled pull-right" disabled>Previous</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_1_1_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 1.1.2
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer form-actions-panel">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-step="step_2">Submit</button>
+                                            <button type="button" class="btn btn-primary pull-right" data-step="step_2">Next</button>
+                                            <button type="button" class="btn btn-disabled pull-right" disabled>Previous</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_1_1_3">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 1.1.3
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer form-actions-panel">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-step="step_2">Submit</button>
+                                            <button type="button" class="btn btn-primary pull-right" data-step="step_2">Next</button>
+                                            <button type="button" class="btn btn-disabled pull-right" disabled>Previous</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_1_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 1.2
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <div class="panel-footer form-actions-panel">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-step="step_2">Submit</button>
+                                            <button type="button" class="btn btn-primary pull-right" data-step="step_2">Next</button>
+                                            <button type="button" class="btn btn-disabled pull-right" disabled>Previous</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        Employment Information
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-step="step_2_1">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right" data-step="step_2_1">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_1">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_2_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 2.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_2_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 2.2
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_2_3">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 2.3
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.2
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_3">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.3
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_4">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.4
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_5">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.5
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_6">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.6
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+
+                        <div data-step="step_3_7">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 3.7
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_4">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 4
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_4_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 4.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_4_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 4.2
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_5">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 5
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_5_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 5.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_5_2">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 5.2
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_5_3">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 5.3
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_6">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 6
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                        <div data-step="step_6_1">
+                            <form role="form" method="get" action="#">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        step 6.1
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile" />
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" /> Check me out</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer form-actions-panel">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-primary pull-right">Next</button>
+                                        <button type="button" class="btn btn-default pull-right" data-step="step_2">Previous</button>
+                                    </div>
+                                </div>    
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3">
+                <!--pending task container-->
+                    <div class="pending-task-panel">
+                        <table class="table">
+                            <tr>
+                                <td>Needed documents</td>
+                                <td>
+                                    Show 
+                                    <select>
+                                        <option>All</option>
+                                    </select>
+                                    <span>(6)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>From you</td>                                
+                                <td>From JPMC</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Current address proof
+                                </td>
+                                <td>
+                                    Submitted
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Pay stubs
+                                </td>
+                                <td>
+                                    Submitted
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Latest W2 form
+                                </td>
+                                <td>
+                                    <a href="#">Upload</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Tax return copy
+                                </td>
+                                <td>
+                                    <a href="#">Upload</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Employment verification
+                                </td>
+                                <td>
+                                    <a href="#">Upload</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Revenue declaration
+                                </td>
+                                <td>
+                                    Submitted
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <!--/page container-->
+    </body>
+</html>
